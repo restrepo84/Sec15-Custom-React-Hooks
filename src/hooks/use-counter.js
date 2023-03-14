@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import styles from "./useCounter.module.css";
+// import styles from "./useCounter.module.css";
 
 const useCounter = () => {
   const [counter, setCounter] = useState(0);
@@ -12,6 +12,7 @@ const useCounter = () => {
 
     return () => clearInterval(interval);
   }, []);
+  return counter;
 };
 
 export default useCounter;
